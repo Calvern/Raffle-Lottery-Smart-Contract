@@ -1,66 +1,39 @@
-## Foundry
+# Raffle Lottery Smart Contract 🎟️
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+This project is a decentralized **Raffle Lottery Smart Contract** built in Solidity, following the [Cyfrin Updraft](https://www.cyfrin.io/updraft) course by Patrick Collins.  
+The contract allows participants to enter a lottery by paying an entrance fee. A random winner is selected using Chainlink VRF (Verifiable Random Function), and the process can be automated with Chainlink Automation.
 
-Foundry consists of:
+---
 
-- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
-- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
-- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
-- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## 📌 Features
+- **Enter Raffle**: Users can enter the lottery by sending ETH equal to or above the required entrance fee.
+- **Random Winner Selection**: Uses Chainlink VRF to ensure fair and tamper-proof randomness.
+- **Automated Execution**: Uses Chainlink Automation to trigger winner selection at regular intervals.
 
-## Documentation
+---
 
-https://book.getfoundry.sh/
+## 🛠️ Tech Stack
+- **Solidity** (Smart Contract Language)  
+- **Foundry** (Testing & Development Framework)  
+- **Chainlink VRF & Automation** (Randomness & Task Scheduling)  
+- **Ethereum / EVM-based Chains** (Deployment Target)
 
-## Usage
+---
 
-### Build
+## Learning Outcomes
 
-```shell
-$ forge build
-```
+- Through this project, I learned:
 
-### Test
+- How to implement a decentralized lottery system in Solidity.
 
-```shell
-$ forge test
-```
+- How to integrate Chainlink VRF for randomness.
 
-### Format
+- How to use Chainlink Automation for scheduled execution.
 
-```shell
-$ forge fmt
-```
+- How to write and run tests with Foundry.
 
-### Gas Snapshots
+## Possible Extensions
 
-```shell
-$ forge snapshot
-```
+- Programmatically Add Automation: Instead of manually setting up Chainlink Upkeeps via the UI, integrate it directly into the deployment scripts.
 
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+- More Integration Tests: Expand test coverage to simulate full end-to-end flows with VRF and Automation mocks.
